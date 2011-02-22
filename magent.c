@@ -45,11 +45,11 @@ SUCH DAMAGE.
 
 #if defined(__FreeBSD__) || (defined(__APPLE__) && defined(__MACH__) )
 #include <sys/uio.h>
-#include <limits.h>
 #else
 #include <getopt.h>
 #endif
 
+#include <limits.h>
 #include <unistd.h>
 #include <string.h>
 #include <sys/socket.h>

@@ -4,12 +4,10 @@ CC = gcc
 PROGS =	magent
 ifeq ($(ARCH), $(X64))
 	M64 = -m64
-	LIBS = /usr/lib64/libevent.a /usr/lib64/libm.a 
-else
-	LIBS = -levent -lm -L/usr/local/lib
 endif
+LIBS = -levent -lm
 
-CFLAGS = -Wall -g -O2 -I/usr/local/include $(M64)
+CFLAGS = -Wall -g -O2 $(M64)
 
 all: $(PROGS)
 
